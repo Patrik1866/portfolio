@@ -4,7 +4,7 @@ import "../src/app/globals.css";
 const Works = () => {
     return (
         <Layout>
-            <h1>Works</h1>            
+            <h1>Works ez van  </h1>            
         </Layout>
     );
 };
