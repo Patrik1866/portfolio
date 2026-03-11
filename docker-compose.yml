@@ -5,10 +5,12 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio.rule=Host(`portfolio.project-dev-preview.com`) || Host(`www.portfolio.project-dev-preview.com`)"
+      - "traefik.http.routers.portfolio.rule=Host(\"portfolio.project-dev-preview.com\") || Host(\"www.portfolio.project-dev-preview.com\")"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls=true"
       - "traefik.http.routers.portfolio.tls.certresolver=le"
       - "traefik.http.services.portfolio.loadbalancer.server.port=3000"
+      - "traefik.docker.network=web"
     networks:
       - web
 
