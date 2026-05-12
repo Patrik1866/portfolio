@@ -32,7 +32,7 @@ export default function About() {
               technologies, contributing to open-source projects, or enjoying a
               good cup of coffee.
             </p>
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4 pt-2 flex-wrap justify-center md:justify-start">
               <a
                 href="/cv.pdf"
                 className="inline-flex items-center gap-2 px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors"

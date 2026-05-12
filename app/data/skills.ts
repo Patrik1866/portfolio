@@ -61,6 +61,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "VS Code" },
       { name: "Figma" },
       { name: "Linux" },
+      { name: "GitLab" },
+      { name: "Kanboard" },
     ],
   },
   {
