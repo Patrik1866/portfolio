@@ -35,7 +35,7 @@ export default function Hero() {
           Hello, I&apos;m
         </p>
         <h1 className="hero-text text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Your Name
+          Erdélyi Patrik
         </h1>
         <h2 className="hero-text text-2xl md:text-3xl font-medium text-gray-400 mb-8">
           Full-Stack Developer

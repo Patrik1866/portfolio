@@ -19,10 +19,10 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "E-Commerce App",
+    title: "E-commerce Platform",
     description:
-      "Full-stack e-commerce platform with cart, authentication, and payment integration.",
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      "Full-stack e-commerce platform with cart, authentication, authorization, CRUD, and AI chatbot integration.",
+    tech: ["React", "Node.js", "Java", "Spring Boot", "PostgreSQL", "Gemini API", "Tailwind CSS", "JWT Authentication"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
