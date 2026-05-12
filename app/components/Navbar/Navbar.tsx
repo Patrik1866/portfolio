@@ -39,10 +39,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-[#0f0f0f]/95 backdrop-blur-sm shadow-lg"
-          : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+      bg-[#0a0a0a] backdrop-blur-sm shadow-lg`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <button
@@ -59,8 +57,8 @@ export default function Navbar() {
               <button
                 onClick={() => scrollToSection(link.href)}
                 className={`text-sm font-medium transition-colors hover:text-indigo-400 ${activeSection === link.href
-                    ? "text-indigo-400"
-                    : "text-gray-300"
+                  ? "text-indigo-400"
+                  : "text-gray-300"
                   }`}
               >
                 {link.label}
@@ -112,8 +110,8 @@ export default function Navbar() {
                     setMenuOpen(false);
                   }}
                   className={`text-sm font-medium transition-colors hover:text-indigo-400 ${activeSection === link.href
-                      ? "text-indigo-400"
-                      : "text-gray-300"
+                    ? "text-indigo-400"
+                    : "text-gray-300"
                     }`}
                 >
                   {link.label}

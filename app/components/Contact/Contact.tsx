@@ -25,14 +25,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="contact" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
           Contact
         </h2>
         <div className="w-16 h-1 bg-indigo-600 mx-auto mb-16 rounded-full" />
 
-        <div className="grid md:grid-cols-2 gap-16 items-start max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-start max-w-4xl mx-auto bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-12">
           {/* Info */}
           <div className="space-y-6">
             <p className="text-gray-400 leading-relaxed">

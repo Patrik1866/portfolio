@@ -25,7 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+        <div aria-hidden="true" className="app-background" />
+        <div className="app-shell">{children}</div>
       </body>
     </html>
   );
