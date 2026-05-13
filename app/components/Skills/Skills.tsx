@@ -15,14 +15,14 @@ export default function Skills() {
               key={cat.category}
               className="glass-tile rounded-2xl p-6"
             >
-              <h3 className="neon-amber font-semibold text-sm uppercase tracking-widest mb-5">
+              <h3 className="neon-dark-green font-semibold text-sm uppercase tracking-widest mb-5">
                 {cat.category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (
                   <span
                     key={skill.name}
-                    className="px-3 py-1.5 bg-[#0f0f0f] border border-[#2a2a2a] text-gray-300 text-sm rounded-md"
+                    className="px-3 py-1.5 glass-skill neon-cyan text-sm rounded-md"
                   >
                     {skill.name}
                   </span>

@@ -14,6 +14,7 @@ export const projects: Project[] = [
     description:
       "Personal portfolio built with Next.js, Tailwind CSS, and GSAP animations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+    liveUrl: "https://portfolio.project-dev-preview.com",
   },
   {
     id: 2,

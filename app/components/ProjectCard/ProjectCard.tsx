@@ -8,10 +8,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="glass-tile rounded-2xl p-6 flex flex-col gap-4 hover:border-indigo-500/50 transition-colors duration-300">
       <div>
-        <h3 className="neon-amber font-semibold text-lg mb-2">
+        <h3 className="neon-dark-green font-semibold text-lg mb-2">
           {project.title}
         </h3>
-        <p className="neon-cyan text-sm leading-relaxed">
+        <p className="neon-text text-sm leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {project.tech.map((t) => (
           <span
             key={t}
-            className="px-2.5 py-1 bg-indigo-950 border border-indigo-800/40 text-indigo-300 text-xs rounded-md"
+            className="px-2.5 py-1 glass-project neon-cyan text-xs rounded-md"
           >
             {t}
           </span>
@@ -46,10 +46,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-1.5"
+            className="text-sm neon-pink transition-colors flex items-center gap-1.5"
           >
             <svg
-              className="w-4 h-4"
+              className="w-4 h-4 neon-pink"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
