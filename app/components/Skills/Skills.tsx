@@ -4,18 +4,18 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold  mb-4 text-center neon-dark-green">
           Skills
         </h2>
-        <div className="w-16 h-1 bg-indigo-600 mx-auto mb-16 rounded-full" />
+        <div className="w-16 h-1 bg-gray-800 mx-auto mb-16 rounded-full" />
 
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((cat) => (
             <div
               key={cat.category}
-              className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6"
+              className="glass-tile rounded-2xl p-6"
             >
-              <h3 className="text-indigo-400 font-semibold text-sm uppercase tracking-widest mb-5">
+              <h3 className="neon-amber font-semibold text-sm uppercase tracking-widest mb-5">
                 {cat.category}
               </h3>
               <div className="flex flex-wrap gap-2">

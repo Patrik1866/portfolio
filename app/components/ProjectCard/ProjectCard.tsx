@@ -6,12 +6,12 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 flex flex-col gap-4 hover:border-indigo-500/50 transition-colors duration-300">
+    <div className="glass-tile rounded-2xl p-6 flex flex-col gap-4 hover:border-indigo-500/50 transition-colors duration-300">
       <div>
-        <h3 className="text-white font-semibold text-lg mb-2">
+        <h3 className="neon-amber font-semibold text-lg mb-2">
           {project.title}
         </h3>
-        <p className="text-gray-400 text-sm leading-relaxed">
+        <p className="neon-cyan text-sm leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {project.tech.map((t) => (
           <span
             key={t}
-            className="px-2.5 py-1 bg-indigo-950/60 border border-indigo-800/40 text-indigo-300 text-xs rounded-md"
+            className="px-2.5 py-1 bg-indigo-950 border border-indigo-800/40 text-indigo-300 text-xs rounded-md"
           >
             {t}
           </span>

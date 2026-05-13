@@ -14,8 +14,6 @@ export const projects: Project[] = [
     description:
       "Personal portfolio built with Next.js, Tailwind CSS, and GSAP animations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://www.portfolio.project-dev-preview.com",
   },
   {
     id: 2,
@@ -32,8 +30,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "JWT Authentication",
     ],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "https://webshop.project-dev-preview.com",
   },
   {
     id: 3,
@@ -41,6 +38,6 @@ export const projects: Project[] = [
     description:
       "Collaborative task management app with real-time updates and team features.",
     tech: ["Next.js", "MongoDB", "Socket.io", "Tailwind CSS"],
-    githubUrl: "https://github.com",
+    liveUrl: "https://www.taskmanager.project-dev-preview.com",
   },
 ];

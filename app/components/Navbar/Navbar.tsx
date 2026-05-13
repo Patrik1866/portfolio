@@ -40,12 +40,12 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
-      bg-[#0a0a0a] backdrop-blur-sm shadow-lg`}
+      bg-[#010902] backdrop-blur-sm shadow-lg`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("hero")}
-          className="text-xl font-bold text-white hover:text-indigo-400 transition-colors"
+          className="text-xl font-bold neon-dark-green hover:text-indigo-400 transition-colors"
         >
           {"<Erdélyi Patrik />"}
         </button>
@@ -56,8 +56,8 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors hover:text-indigo-400 ${activeSection === link.href
-                  ? "text-indigo-400"
+                className={`text-sm font-medium transition-colors neon-dark-green ${activeSection === link.href
+                  ? "text-cyan-400"
                   : "text-gray-300"
                   }`}
               >
