@@ -151,6 +151,14 @@ body {
   transition: all 0.3s ease;
 }
 
+.neon-input {
+  box-shadow:
+    0 0 2px #16ff06,
+    0 0 10px #30fd0c,
+    0 0 15px #0dff1d,
+    inset 0 0 0 1px #16ff06;
+}
+
 .app-shell {
   position: relative;
   z-index: 0;
