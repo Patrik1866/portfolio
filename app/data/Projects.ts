@@ -10,11 +10,11 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "Encrypted file-sharing platform",
     description:
-      "Personal portfolio built with Next.js, Tailwind CSS, and GSAP animations.",
+      "Make secure sharing effortless, while keeping ownership and control in the hands of the user.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
-    liveUrl: "https://portfolio.project-dev-preview.com",
+    liveUrl: "https://vaultshare.project-dev-preview.com",
   },
   {
     id: 2,
@@ -39,6 +39,6 @@ export const projects: Project[] = [
     description:
       "Collaborative task management app with real-time updates and team features.",
     tech: ["Next.js", "MongoDB", "Socket.io", "Tailwind CSS"],
-    liveUrl: "https://www.taskmanager.project-dev-preview.com",
+    liveUrl: "https://www.collabpulse.project-dev-preview.com",
   },
 ];
