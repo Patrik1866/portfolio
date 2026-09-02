@@ -39,26 +39,28 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
-      bg-[#010902] backdrop-blur-sm shadow-lg`}
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${isScrolled
+        ? "border-[#252821]/10 bg-[#e4e0d6]/90 shadow-[0_8px_30px_rgba(58,50,40,0.07)] backdrop-blur-md"
+        : "border-transparent bg-transparent"
+        }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <button
           onClick={() => scrollToSection("hero")}
-          className="text-xl font-bold neon-dark-green hover:text-indigo-400 transition-colors"
+          className="font-mono text-sm font-bold tracking-wide text-[#254c3f] transition-colors hover:text-[#17362c]"
         >
-          {"<Erdélyi Patrik />"}
+          {"EP / 01"}
         </button>
 
         {/* Desktop menu */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <button
                 onClick={() => scrollToSection(link.href)}
-                className={`text-sm font-medium transition-colors neon-dark-green ${activeSection === link.href
-                  ? "text-cyan-400"
-                  : "text-gray-300"
+                className={`text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${activeSection === link.href
+                  ? "text-[#254c3f]"
+                  : "text-[#6b6e64] hover:text-[#254c3f]"
                   }`}
               >
                 {link.label}
@@ -69,7 +71,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-gray-300 hover:text-white"
+          className="text-[#254c3f] md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -100,8 +102,8 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0f0f0f]/98 border-t border-[#2a2a2a]">
-          <ul className="px-6 py-4 flex flex-col gap-4">
+        <div className="border-t border-[#252821]/10 bg-[#e4e0d6]/95 shadow-[0_14px_30px_rgba(58,50,40,0.1)] backdrop-blur-md md:hidden">
+          <ul className="flex flex-col gap-4 px-6 py-5">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <button
@@ -109,9 +111,9 @@ export default function Navbar() {
                     scrollToSection(link.href);
                     setMenuOpen(false);
                   }}
-                  className={`text-sm font-medium transition-colors hover:text-indigo-400 ${activeSection === link.href
-                    ? "text-indigo-400"
-                    : "text-gray-300"
+                  className={`text-left text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${activeSection === link.href
+                    ? "text-[#254c3f]"
+                    : "text-[#6b6e64] hover:text-[#254c3f]"
                     }`}
                 >
                   {link.label}

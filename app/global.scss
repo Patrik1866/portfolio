@@ -1,12 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: url("/images/portfolioBackground.jpg");
-  --foreground: #f0f0f0;
-  --accent: #6366f1;
-  --card: #1a1a1a;
-  --border: #2a2a2a;
-  --background-color: #010902;
+  --ink: #252821;
+  --muted-ink: #667064;
+  --paper: #e4e0d6;
+  --paper-deep: #cfcbc0;
+  --bark: #695d4f;
+  --forest: #254c3f;
+  --forest-dark: #17362c;
+  --line: rgba(37, 40, 33, 0.16);
+  --background-color: #ded9ce;
 }
 
 html {
@@ -16,6 +19,7 @@ html {
 body {
   min-height: 100vh;
   min-height: 100svh;
+  overflow-x: hidden;
 }
 
 @theme inline {
@@ -28,9 +32,9 @@ body {
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 .app-background {
@@ -41,11 +45,9 @@ body {
   bottom: calc(-1 * env(safe-area-inset-bottom, 0px));
   z-index: -1;
   pointer-events: none;
-  background-color: var(--background-color);
-  background-image: var(--background);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background:
+    repeating-linear-gradient(90deg, transparent 0, transparent 76px, rgba(37, 40, 33, 0.025) 77px),
+    linear-gradient(128deg, #e9e5db 0%, #ddd7cb 48%, #cbc5b7 100%);
 }
 
 @media (max-width: 768px) {
@@ -55,108 +57,70 @@ body {
   }
 }
 
-.neon-text {
-  text-shadow:
-    0 0 2px #16ff06,
-    0 0 10px #30fd0c,
-    0 0 25px #0dff1d;
+.section-kicker {
+  color: var(--forest);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.neon-dark-green {
-  text-shadow:
-    0 0 5px #058105,
-    0 0 20px #078207,
-    0 0 45px #0b840b;
+.section-title {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.05;
 }
 
-.neon-cyan {
-  text-shadow:
-    0 0 5px #00ffff,
-    0 0 20px #00ffff,
-    0 0 45px #00ffff;
+.section-rule {
+  width: 3.5rem;
+  height: 2px;
+  background: var(--forest);
 }
 
-.neon-pink {
-  text-shadow:
-    0 0 2px #ff69b4,
-    0 0 15px #ff69b4,
-    0 0 30px #ff69b4;
-  & svg {
-    color: #ff69b4;
-    box-shadow:
-      0 0 1px #ff69b4,
-      0 0 10px #ff69b4,
-      0 0 50px #ff69b4,
-      inset 0 0 0 1px #ff69b4;
+.surface {
+  border: 1px solid var(--line);
+  background: rgba(242, 239, 231, 0.58);
+  box-shadow: 0 16px 45px rgba(58, 50, 40, 0.08);
+}
+
+.eyebrow-line::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  background: currentColor;
+}
+
+.reveal {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 30%;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.neon-purple {
-  text-shadow:
-    0 0 5px #800080,
-    0 0 20px #800080,
-    0 0 45px #800080;
-}
-
-.neon-amber {
-  text-shadow:
-    0 0 5px #ffbf00,
-    0 0 20px #ffbf00,
-    0 0 45px #ffbf00;
-}
-
-.glass-btn {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: none;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.glass-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow:
-    0 6px 40px rgba(0, 0, 0, 0.15),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.3);
-}
-
-.glass-tile {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: none;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
-    inset 0 0 0 2px rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.glass-skill,
-.glass-project {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: none;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px rgba(10, 232, 239, 0.2),
-    inset 0 0 0 2px rgba(10, 232, 239, 0.2);
-  transition: all 0.3s ease;
-}
-
-.neon-input {
-  box-shadow:
-    0 0 2px #16ff06,
-    0 0 10px #30fd0c,
-    0 0 15px #0dff1d,
-    inset 0 0 0 1px #16ff06;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .app-shell {

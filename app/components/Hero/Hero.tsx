@@ -28,36 +28,41 @@ export default function Hero() {
     <section
       id="hero"
       ref={containerRef}
-      className="min-h-svh flex items-center justify-center px-6 pt-16"
+      className="relative min-h-svh overflow-hidden px-6 pt-16"
     >
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="hero-text text-white neon-dark-green text-sm font-mono mb-4 tracking-widest uppercase">
+      <div className="absolute right-[-7rem] top-[23%] h-72 w-72 rounded-full border border-[#254c3f]/20 sm:h-96 sm:w-96" />
+      <div className="absolute left-[-3rem] bottom-[15%] h-32 w-[35vw] max-w-80 border-y border-[#695d4f]/20" />
+      <div className="relative mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl flex-col justify-center">
+        <p className="hero-text eyebrow-line section-kicker mb-6">
           Hello, I&apos;m
         </p>
-        <h1 className="hero-text text-5xl md:text-7xl font-bold text-white mb-6 leading-tight ">
+        <h1 className="hero-text max-w-4xl text-5xl font-bold leading-[0.98] tracking-normal text-[#252821] sm:text-7xl lg:text-8xl">
           Erdélyi Patrik
         </h1>
-        <h2 className="hero-text text-2xl md:text-3xl font-medium text-white neon-dark-green mb-8">
+        <h2 className="hero-text mt-6 text-xl font-medium text-[#254c3f] md:text-2xl">
           Full-Stack Developer
         </h2>
-        <p className="hero-text text-white neon-text text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="hero-text mt-8 max-w-xl text-base leading-7 text-[#565c52] md:text-lg">
           I build clean, performant web applications with modern technologies.
           Passionate about great user experiences and scalable code.
         </p>
-        <div className="hero-text flex items-center justify-center gap-4 flex-wrap">
+        <div className="hero-text mt-10 flex flex-wrap items-center gap-3">
           <button
             onClick={() => scrollToSection("projects")}
-            className="px-8 py-3 neon-cyan text-white font-medium rounded-lg transition-colors duration-200 glass-btn"
+            className="border border-[#254c3f] bg-[#254c3f] px-6 py-3 text-sm font-semibold text-[#f3f0e9] transition-colors hover:bg-[#17362c]"
           >
             View Projects
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="px-8 py-3 border border-[#2a2a2a glass-btn neon-cyan font-medium rounded-lg transition-colors duration-200"
+            className="border border-[#695d4f]/50 px-6 py-3 text-sm font-semibold text-[#3f463c] transition-colors hover:border-[#254c3f] hover:text-[#254c3f]"
           >
             Contact Me
           </button>
         </div>
+        <p className="hero-text mt-16 font-mono text-[0.68rem] uppercase tracking-[0.12em] text-[#77766c]">
+          Based in Hungary · Available for thoughtful digital work
+        </p>
       </div>
     </section>
   );

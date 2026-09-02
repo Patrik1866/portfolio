@@ -25,24 +25,25 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white neon-dark-green mb-4 text-center">
+    <section id="contact" className="border-t border-[#252821]/10 bg-[#c9c2b4]/30 px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="section-kicker reveal text-center">04 / Get in touch</p>
+        <h2 className="section-title reveal mt-3 text-center">
           Contact
         </h2>
-        <div className="w-16 h-1 bg-gray-800 mx-auto mb-16 rounded-full" />
+        <div className="section-rule reveal mx-auto mt-6 mb-14" />
 
-        <div className="grid md:grid-cols-2 gap-16 items-start max-w-4xl mx-auto glass-tile rounded-2xl p-12">
+        <div className="mx-auto grid max-w-5xl gap-10 border border-[#252821]/15 bg-[#e7e2d8]/60 p-6 sm:p-9 md:grid-cols-2 md:gap-14 md:p-12">
           {/* Info */}
-          <div className="space-y-6">
-            <p className="neon-text leading-relaxed">
+          <div className="reveal space-y-7">
+            <p className="max-w-sm leading-7 text-[#555b51]">
               Have a project in mind or want to chat? Feel free to reach
               out — I&apos;d love to hear from you.
             </p>
-            <div className="space-y-4">
+            <div className="space-y-5">
               <a
                 href="mailto:erdelyi.patrik99@gmail.com"
-                className="flex items-center gap-3 neon-cyan transition-colors"
+                className="flex items-center gap-3 break-all text-sm font-medium text-[#254c3f] transition-colors hover:text-[#17362c]"
               >
                 <svg
                   className="w-5 h-5"
@@ -63,7 +64,7 @@ export default function Contact() {
                 href="https://github.com/Patrik1866"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 neon-cyan transition-colors"
+                className="flex items-center gap-3 text-sm font-medium text-[#254c3f] transition-colors hover:text-[#17362c]"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
@@ -74,7 +75,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/erd%C3%A9lyi-patrik-b643142b9/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 neon-cyan transition-colors"
+                className="flex items-center gap-3 text-sm font-medium text-[#254c3f] transition-colors hover:text-[#17362c]"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -85,11 +86,11 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="reveal space-y-4">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm neon-dark-green font-bold mb-1.5"
+                className="mb-1.5 block text-xs font-bold uppercase tracking-[0.1em] text-[#254c3f]"
               >
                 Name
               </label>
@@ -101,13 +102,13 @@ export default function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Your name"
-                className="w-full px-4 py-3 bg-gray-300/80 border rounded-lg text-white placeholder-green-600 focus:outline-none transition-colors neon-input"
+                className="w-full border border-[#695d4f]/35 bg-[#f0ede5]/75 px-4 py-3 text-sm text-[#252821] outline-none placeholder:text-[#8a887d] transition-colors focus:border-[#254c3f]"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm neon-dark-green font-bold mb-1.5"
+                className="mb-1.5 block text-xs font-bold uppercase tracking-[0.1em] text-[#254c3f]"
               >
                 Email
               </label>
@@ -119,13 +120,13 @@ export default function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your@email.com"
-                className="w-full px-4 py-3 bg-gray-300/80 border rounded-lg text-white placeholder-green-600 focus:outline-none transition-colors neon-input"
+                className="w-full border border-[#695d4f]/35 bg-[#f0ede5]/75 px-4 py-3 text-sm text-[#252821] outline-none placeholder:text-[#8a887d] transition-colors focus:border-[#254c3f]"
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm neon-dark-green font-bold mb-1.5"
+                className="mb-1.5 block text-xs font-bold uppercase tracking-[0.1em] text-[#254c3f]"
               >
                 Message
               </label>
@@ -137,13 +138,13 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me about your project..."
-                className="w-full px-4 py-3 bg-gray-300/80 border rounded-lg text-white placeholder-green-600 focus:outline-none transition-colors resize-none neon-input"
+                className="w-full resize-none border border-[#695d4f]/35 bg-[#f0ede5]/75 px-4 py-3 text-sm text-[#252821] outline-none placeholder:text-[#8a887d] transition-colors focus:border-[#254c3f]"
               />
             </div>
             <button
               type="submit"
               disabled={status === "sending" || status === "sent"}
-              className="w-full py-3 glass-btn disabled:cursor-not-allowed neon-cyan font-medium rounded-lg transition-colors duration-200"
+              className="w-full border border-[#254c3f] bg-[#254c3f] py-3 text-sm font-semibold text-[#f3f0e9] transition-colors hover:bg-[#17362c] disabled:cursor-not-allowed disabled:border-[#8b8c82] disabled:bg-[#8b8c82]"
             >
               {status === "sending"
                 ? "Sending..."

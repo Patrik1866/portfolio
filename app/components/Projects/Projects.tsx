@@ -3,14 +3,15 @@ import ProjectCard from "@/app/components/ProjectCard/ProjectCard";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white neon-dark-green mb-4 text-center">
+    <section id="projects" className="px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl">
+        <p className="section-kicker reveal text-center">03 / Selected work</p>
+        <h2 className="section-title reveal mt-3 text-center">
           Projects
         </h2>
-        <div className="w-16 h-1 bg-gray-800 mx-auto mb-16 rounded-full" />
+        <div className="section-rule reveal mx-auto mt-6 mb-14" />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
