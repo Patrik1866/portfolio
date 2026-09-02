@@ -38,7 +38,7 @@ export const projects: Project[] = [
     title: "Task Manager",
     description:
       "Collaborative task management app with real-time updates and team features.",
-    tech: ["Next.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+    tech: ["Next.js", "PostgreSQL", "Socket.io", "Tailwind CSS", "Redis", "JWT Authentication"],
     liveUrl: "https://www.collabpulse.project-dev-preview.com",
   },
 ];
